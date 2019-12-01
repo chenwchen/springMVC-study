@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style type="text/css">
+        .buttonGroup{
+            height: 1000px;
+            width: 300px;
+            background: #ccc;
+            padding: 0px 2px 0px 2px;
+        }
+        .buttonGroup button,input{
+            width: 300px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="buttonGroup">
+    <input placeholder="please input email!" type="email" name="inText">
+    <button name="pathVariable">@pathVariable</button>
+    userName :<input name="userName" type="text" />
+    userPwd :<input name="userPwd" type="text" />
+    <button name="requestBody">@RequestBody</button>
+</div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.buttonGroup button[name="pathVariable"]').click(function(){
+            // alert($('.buttonGroup input[name="inText"]').val());
+            $.ajax({
+                type:"POST",
+                url:"test/email/"+ $('.buttonGroup input[name="inText"]').val(),
+                async:false,
+                success:function(email){
+                    alert(email);
+                }
+            });
+
+        });
+
+        $('.buttonGroup button[name="requestBody"]').click(function(){
+            var message = {
+                userName:$('.buttonGroup input[name="userName"]').val(),
+                userPwd:$('.buttonGroup input[name="userPwd"]').val()
+            };
+            $.ajax({
+                type:"POST",
+                url:"test/reqBody",
+                data:JSON.stringify(message),
+                async:false,
+                contentType: "application/json; charset=utf-8",
+                success:function(message){
+                    var obj = JSON.parse(message);
+                    alert("userName : " + obj.userName + "userPwd : " +obj.userPwd);
+                }
+
+
+            });
+
+        });
+
+    });
+
+</script>
+</html>

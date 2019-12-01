@@ -17,7 +17,7 @@
                 name="age"
                 value="21"/>
         <property
-            name="myList">
+                name="myList">
             <list>
                 <value>1</value>
                 <value>2</value>
@@ -26,7 +26,7 @@
             </list>
         </property>
         <property
-            name="mySet">
+                name="mySet">
             <set>
                 <value>SET1</value>
                 <value>SET2</value>
@@ -34,7 +34,7 @@
             </set>
         </property>
         <property
-            name="myMap">
+                name="myMap">
             <map>
                 <entry key="key1" value="value1"/>
                 <entry key="key2" value="value2"/>
@@ -42,7 +42,7 @@
             </map>
         </property>
         <property
-            name="prop">
+                name="prop">
             <props>
                 <prop key="p1">P1</prop>
                 <prop key="p2">P2</prop>
@@ -57,24 +57,22 @@
     <bean id="hobby1"
           class="spring.test.Hobby"/>
     <bean
-        id="person"
-        class="spring.test.Person">
+            id="person"
+            class="spring.test.Person">
         <property
                 name="name"
                 value="chen"/>
         <property
-            name="age"
-            value="21"/>
+                name="age"
+                value="21"/>
     </bean>
-   <aop:config>
-       <aop:aspect id="myAspect" ref="student">
-           <aop:pointcut  id="businessService"
-               expression="execution(* spring.test.Student.getName())"/>
-       </aop:aspect>
+    <aop:config>
+        <aop:aspect id="myAspect" ref="student">
+            <aop:pointcut id="businessService"
+                          expression="execution(* spring.test.Student.getName())"/>
+        </aop:aspect>
 
-   </aop:config>
-
-
+    </aop:config>
 
 
 </beans>

@@ -8,6 +8,7 @@ spring\annotation\aop\Logging.class
 spring\jdbc\Test.class
 spring\jdbc\StudentDao.class
 spring\aop\Student.class
+mybatis\dao\IUserDao.class
 spring\test\JavaBeanConfig.class
 springMVC\MyServlet.class
 spring\annotation\aop\Test.class
@@ -15,13 +16,16 @@ spring\test\Student.class
 spring\customize\CustomEvent.class
 spring\customize\CustomEventPublisher.class
 spring\test\CStartListener.class
+mybatis\dao\User.class
 spring\test\Hobby.class
 spring\test\Test.class
 springMVC\helloworld\HelloController.class
 spring\jdbc\StudentMapper.class
 spring\customize\MainApp.class
+springMVC\pojo\User.class
 spring\aop\Logging.class
 spring\customize\CustomEventHandler.class
 spring\annotation\test\Test.class
+mybatis\pojo\User.class
 spring\aop\Test.class
 spring\test\Person.class

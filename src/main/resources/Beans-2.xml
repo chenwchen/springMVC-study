@@ -12,6 +12,6 @@
     </bean>
     <bean id="studentJDBCTemplate"
           class="spring.jdbc.StudentJDBCTemplate">
-          <property name="dataSource" ref="dataSource"/>
+        <property name="dataSource" ref="dataSource"/>
     </bean>
 </beans>
