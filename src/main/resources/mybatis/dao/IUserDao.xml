@@ -5,6 +5,6 @@
 <mapper namespace="mybatis.dao.IUserDao">
 
     <!--配置查询所有-->
-    <select id="findAll">select  * from user</select>
+    <select id="findAll" resultType="mybatis.pojo.User">select  * from user</select>
 
 </mapper>
