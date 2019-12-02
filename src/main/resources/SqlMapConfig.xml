@@ -14,7 +14,7 @@
             <dataSource type="POOLED">
                 <!--配置数据库的基本信息-->
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://106.14.136.195:3306/test"/>
+                <property name="url" value="jdbc:mysql://106.14.136.195:3306/test?useSSL=false"/>
                 <property name="username" value="root"/>
                 <property name="password" value="chen19980812"/>
             </dataSource>
@@ -22,7 +22,9 @@
     </environments>
     <!--指定映射文件的位置，映射配置文件指定dao独立的配置文件-->
     <mappers>
-        <mapper resource="mybatis/dao/IUserDao.xml" />
+<!--        <mapper resource="mybatis/dao/IUserDao.xml" />-->
+<!--        <mapper class="mybatis.dao.IUserDao"/>-->
+        <package name="mybatis.dao"/>
     </mappers>
 
 </configuration>
